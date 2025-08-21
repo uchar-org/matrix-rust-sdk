@@ -1235,6 +1235,15 @@ impl Client {
             .collect()
     }
 
+    /// Returns the joined space rooms this client knows about.
+    pub fn joined_space_rooms(&self) -> Vec<Room> {
+        self.base_client()
+            .rooms_filtered(RoomStateFilter::JOINED)
+            .into_iter()
+            .flat_map(|room| room.is_space().then_some(Room::new(self.clone(), room)))
+            .collect()
+    }
+
     /// Get a room with the given room id.
     ///
     /// # Arguments
