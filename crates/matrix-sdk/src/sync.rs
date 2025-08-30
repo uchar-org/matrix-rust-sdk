@@ -146,7 +146,7 @@ impl fmt::Debug for RoomUpdate {
 impl Client {
     /// Receive a sync response, compute extra information out of it and store
     /// the interesting bits in the database, then call all the handlers.
-    pub(crate) async fn process_sync(
+    pub async fn process_sync(
         &self,
         response: sync_events::v3::Response,
     ) -> Result<BaseSyncResponse> {
