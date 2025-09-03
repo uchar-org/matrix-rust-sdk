@@ -2,36 +2,36 @@
 // Needed because uniffi macros contain empty lines after docs.
 #![allow(clippy::empty_line_after_doc_comments)]
 
-mod authentication;
-mod chunk_iterator;
-mod client;
-mod client_builder;
-mod encryption;
-mod error;
-mod event;
-mod helpers;
-mod identity_status_change;
-mod live_location_share;
-mod notification;
-mod notification_settings;
-mod platform;
-mod qr_code;
-mod room;
-mod room_alias;
-mod room_directory_search;
-mod room_list;
-mod room_member;
-mod room_preview;
-mod ruma;
-mod runtime;
-mod session_verification;
-mod sync_service;
-mod task_handle;
-mod timeline;
-mod tracing;
-mod utd;
-mod utils;
-mod widget;
+pub mod authentication;
+pub mod chunk_iterator;
+pub mod client;
+pub mod client_builder;
+pub mod encryption;
+pub mod error;
+pub mod event;
+pub mod helpers;
+pub mod identity_status_change;
+pub mod live_location_share;
+pub mod notification;
+pub mod notification_settings;
+pub mod platform;
+pub mod qr_code;
+pub mod room;
+pub mod room_alias;
+pub mod room_directory_search;
+pub mod room_list;
+pub mod room_member;
+pub mod room_preview;
+pub mod ruma;
+pub mod runtime;
+pub mod session_verification;
+pub mod sync_service;
+pub mod task_handle;
+pub mod timeline;
+pub mod tracing;
+pub mod utd;
+pub mod utils;
+pub mod widget;
 
 use matrix_sdk::ruma::events::room::message::RoomMessageEventContentWithoutRelation;
 
